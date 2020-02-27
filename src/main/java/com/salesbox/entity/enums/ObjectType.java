@@ -1,0 +1,67 @@
+package com.salesbox.entity.enums;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: tienhd
+ * Date: 7/29/14
+ * Time: 3:49 PM
+ */
+public enum ObjectType
+{
+    OPPORTUNITY(0),
+    ACCOUNT(1),
+    CONTACT(2),
+    TASK(3),
+    APPOINTMENT(4),
+    LINE_OF_BUSINESS(5),
+    LEAD(6),
+    PRODUCT_REGISTER(7),
+    ORDER_ROW(8),
+    DISTRIBUTE_TASK(9),
+    DISTRIBUTE_LEAD(10),
+    TASK_INVITED(11),
+    NONE(12),
+    INVITE_LEAD(13),
+    ADD_USER_REACH_NUMBER_LICENSE(14),
+    NEW_CALL_RECORD(15),
+    NEW_DIAL_RECORD(16),
+    CALL_BACK_LATER(17),
+    ENCOURAGE_IMPORT_CONTACT_DEVICE(18),
+    ENCOURAGE_ADD_PHOTO_TO_PROSPECT(19),
+    ENCOURAGE_ADD_DOCUMENT_TO_PROSPECT(20),
+    ENCOURAGE_ADD_SECOND_USER_TO_ACCOUNT_TEAM(21),
+    ENCOURAGE_ADD_SECOND_USER_TO_CONTACT_TEAM(22),
+    ENCOURAGE_ADD_SECOND_USER_TO_PROSPECT_TEAM(23),
+    CALL_LIST(24),
+    PERSONAL_START_SCREEN(25),
+    PERSONAL_SYNC_SCREEN(26),
+    COMPANY_IMPORT(27),
+    PERSONAL_STORAGE(28),
+    COMPANY_DEFAULT_VALUE_SALES_PROCESS(29),
+    COMPANY_INFO_INTEGRATION(30),
+    USER(31),
+    LIST_LEAD(32),
+    LIST_OPPORTUNITY(33),
+    CALL_LIST_ACCOUNT(34),
+    CALL_LIST_CONTACT(35),
+    DISTRIBUTE_LEAD_TAB(36),
+    DISTRIBUTE_TASK_TAB(37),
+    INSIGHT_ACTIVITY_TAB(38),
+    CONTACT_ALPHABETICAL_TAB(39),
+    CAMPAIGN(40),
+    WON_OPP(41),
+    SYNC_MAIL(42),
+    SYNC_EMAIL(43);
+
+    private int extension;
+
+    private ObjectType(int extension)
+    {
+        this.extension = extension;
+    }
+
+    public int getExtension()
+    {
+        return this.extension;
+    }
+}
