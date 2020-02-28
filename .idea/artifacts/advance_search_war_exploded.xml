@@ -1,6 +1,12 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="advance-search:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/advance_search_war_exploded</output-path>
-    <root id="root" />
+    <root id="root">
+      <element id="archive" name="advance-search.war">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+    </root>
   </artifact>
 </component>

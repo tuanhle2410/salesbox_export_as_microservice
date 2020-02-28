@@ -1,14 +1,21 @@
 package com.salesbox;
 
+import com.salesbox.exception.ServiceException;
 import com.salesbox.organisation.dto.OrganisationFilterDTO;
 import com.salesbox.service.organisation.ExportOrganisationService;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Configuration;
 
+import java.io.IOException;
+
+@Configuration
 public class Application
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws InvalidFormatException, IOException, ServiceException
     {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
 
         ExportOrganisationService exportOrganisationService = context.getBean(ExportOrganisationService.class);
 
@@ -18,6 +25,6 @@ public class Application
         organisationFilterDTO.setRoleFilterValue("15421e5d-9f46-4d46-916a-73f440c09cc7");
         organisationFilterDTO.setCustomFilter("active");
         organisationFilterDTO.setOrderBy("closedSales");
-        System.out.println(exportOrganisationService.exportAdvancedSearch(token, organisationFilterDTO, ));
+        System.out.println(exportOrganisationService.exportAdvancedSearch(token, organisationFilterDTO.toString()));
     }
 }

@@ -31,6 +31,6 @@ public class AdvanceSearchController
                                          @RequestParam @Named("filterDTO") String filterDTO,
                                          HttpServletRequest request, HttpServletResponse response) throws IOException, ServiceException, ParseException, EncoderException, IllegalAccessException, InvalidFormatException
     {
-        return  exportOrganisationService.exportAdvancedSearch(token, filterDTO, request, response);
+        return  exportOrganisationService.exportAdvancedSearch(token, filterDTO);
     }
 }

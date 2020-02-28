@@ -733,9 +733,7 @@ public class ExportOrganisationService extends BaseService
         outputStream.close();
     }
 
-    public ExportResultDTO exportAdvancedSearch(String token, String filterDTO,
-                                                HttpServletRequest request,
-                                                HttpServletResponse response) throws ServiceException, IOException, InvalidFormatException
+    public ExportResultDTO exportAdvancedSearch(String token, String filterDTO) throws ServiceException, IOException, InvalidFormatException
     {
 
         OrganisationFilterDTO organisationFilterDTO = gson.fromJson(filterDTO, OrganisationFilterDTO.class);
